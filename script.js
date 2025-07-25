@@ -1,9 +1,16 @@
-let closeNavBar = document.querySelector(".close");
-let navBar = document.querySelector(".nav__links");
-let menuBar = document.querySelector(".menu-logo");
-closeNavBar.addEventListener("click", () => {
-    navBar.classList.add("hide");
+let nav = document.querySelector("#navbar");
+let menuButton = document.querySelector("#menu");
+let closeButton = document.querySelector("#close");
+let shoppingCart= document.querySelector("#shopping-cart");
+let cartBox = document.querySelector("#cart-box");
+menuButton.addEventListener("click",()=>{
+    nav.classList.add("show");
+    nav.classList.remove("hide");
 });
-menuBar.addEventListener("click",()=>{
-    navBar.classList.remove("hide");
+closeButton.addEventListener("click",()=>{
+    nav.classList.remove("show");
+    nav.classList.add("hide");
+});
+shoppingCart.addEventListener("click",()=>{
+    cartBox.classList.toggle("hide");
 });
