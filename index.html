@@ -26,38 +26,44 @@
       </nav>
     </div>
     <div class="second__nav">
-      <img src="./images/icon-cart.svg" alt="" id="shopping-cart" class="">
+      <div class="shopping-cart">
+        <img src="./images/icon-cart.svg" alt="" id="shopping-cart" class="">
+        <span class="no-of-items no-of-items-hidden">1</span>
+      </div>
       <img src="./images/image-avatar.png" alt="">
     </div>
   </header>
   <main>
     <div class="image-container">
-      <img src="./images/image-product-1.jpg" alt="" class="shoes-image-1 img" />
-      <img src="./images/image-product-2.jpg" alt="" class="shoes-image-1 img" />
-      <img src="./images/image-product-3.jpg" alt="" class="shoes-image-1 img" />
-      <img src="./images/image-product-4.jpg" alt="" class="shoes-image-1 img" />
+      <img src="./images/image-product-1.jpg" alt="" class="shoes-image-1 img slide" />
+      <img src="./images/image-product-2.jpg" alt="" class="shoes-image-1 img slide" />
+      <img src="./images/image-product-3.jpg" alt="" class="shoes-image-1 img slide" />
+      <img src="./images/image-product-4.jpg" alt="" class="shoes-image-1 img slide" />
       <div class="arrows">
-        <img src="./images/icon-previous.svg" alt="" class="previous-image icon" />
-        <img src="./images/icon-next.svg" alt="" class="next-image icon" />
+        <img src="./images/icon-previous.svg" alt="" class="previous-image icon" onclick="goPrev()"/>
+        <img src="./images/icon-next.svg" alt="" class="next-image icon" onclick="goNext()"/>
       </div>
       <div class="cart-box hide" id="cart-box">
         <p class="cart">Cart</p>
-        <div class="cart-container">
-          <div class="products-image">
-            <img src="./images/image-product-1.jpg" alt="">
+        <div class="cart-container__main">
+           <p class="empty-card">Your card is empty</p>
+          <div class="cart-container">
+            <div class="products-image">
+              <img src="./images/image-product-1.jpg" alt="">
+            </div>
+            <div class="product-name">
+              <p class="shoes-name">Fall Limited Edition Sneakers</p>
+              <p class="amount-price"><span class="unit-price">$125.00</span> × <span class="quantity-stock">3</span> <span class="total-price">$375.00</span></p>
+            </div>
+            <div class="delete-icon">
+              <img src="./images/icon-delete.svg" alt="">
+            </div>
+            <button class="check-out">
+              <p>Checkout</p>
+            </button>
           </div>
-          <div class="product-name">
-            <p class="shoes-name">Fall Limited Edition Sneakers</p>
-            <p class="amount-price">$125.00 × 3 <span class="total-price">$375.00</span></p>
-          </div>
-          <div class="delete-icon">
-            <img src="./images/icon-delete.svg" alt="">
-          </div>
-          <button class="check-out">
-            <p>Checkout</p>
-          </button>
+                </div>
         </div>
-      </div>
     </div>
     <div class="image-container-desktop">
       <img src="./images/image-product-1.jpg" alt="" class="shoes-image-1" />
@@ -80,9 +86,9 @@
         </div>
       </div>
       <div class="calculation-buttons">
-        <img src="./images/icon-minus.svg" alt="">
+        <img src="./images/icon-minus.svg" alt="" class="minus-button">
         <span class="product-quantity">0</span>
-        <img src="./images/icon-plus.svg" alt="">
+        <img src="./images/icon-plus.svg" alt="" class="plus-button">
       </div>
       <button class="add-cart">
         <img src="./images/icon-cart.svg" alt="" class="add-cart-icon">
