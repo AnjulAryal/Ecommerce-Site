@@ -149,6 +149,7 @@ nav li{
     column-gap: 1rem;
     background-color: var(--Orange);
     box-shadow: 0px 2px 5px black;
+    width: 100%;
 }
 .add-cart p,.add-cart-icon{
     color: black;
@@ -246,6 +247,66 @@ nav li{
     justify-content: center;
     align-items: center;
 }
+.btns{
+    display: grid;
+    gap: 1rem;
+}
 @media screen and (min-width:760px){
-
+    body{
+    grid-template-columns: 135px 1150px 135px;
+    grid-row: 100px 620px;
+    row-gap: 3rem;
+    }
+    header{
+        grid-row: 1/2;
+        grid-column:2/3 ;
+        border-block-end: 0.0000111rem solid black;
+    }
+    main{
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 430px 500px;
+        column-gap: 100px;
+        justify-content: center;
+    }
+    .slide{
+        border-radius: 0.5rem;
+    }
+    .arrows{
+        display: none;
+    }
+    .btns{
+        grid-template-columns: 150px 250px;
+        grid-template-rows: 45px;
+    }
+    .price{
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1rem;
+    }
+    .menu,.close{
+        display: none;
+    }
+    .content{
+        row-gap: 2rem;
+    }
+    .navbar{
+    height: fit-content;
+    background-color: white;
+    position: absolute;
+    top: 3.5%;
+    left: 25%;
+    transition: left 0.5s ease;
+    display: flex;
+    color: black;
+    font-weight: 100;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    padding: 1rem;
+    list-style-type: none;
+    color: rgb(163, 158, 158);
+}
 }
