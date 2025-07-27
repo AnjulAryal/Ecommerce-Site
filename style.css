@@ -406,13 +406,23 @@ nav li{
     cursor: pointer;
 }
 .image-container-1{
-    display: flex;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 500px 50px;
     position: absolute;
-    top:5%;
+    top:3%;
     left: 25%;
+    row-gap: 0.5rem;
     display: none;
 }
 .cross-icon{
     display: flex;
+}
+.image-container-1 .image-container-desktop{
+    grid-row: 2/3;
+    padding: 1rem;
+}
+.image-container-1 .slide{
+    grid-row: 1/2;
 }
 }
