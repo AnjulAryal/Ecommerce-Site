@@ -13,7 +13,10 @@ let checkOutButton = document.querySelector(".check-out");
 let deleteButton = document.querySelector(".delete-icon");
 let cardContainer = document.querySelector(".cart-container");
 let emptyCard = document.querySelector(".empty-card");
-console.log(cardContainer)
+let selects = document.querySelectorAll(".select");
+let selectDiv = document.querySelectorAll(".select-div");
+let imageContainer = document.querySelector(".desktop-image");
+let imageContainerMobile = document.querySelector(".image-container");
 let counter = 0;
 slides.forEach((slide,index)=>{
     slide.style.left = `${index * 100}%`
@@ -82,3 +85,19 @@ deleteButton.addEventListener("click",()=>{
     cardContainer.style.display = "none";
     emptyCard.style.display = "block";
 })
+selects.forEach((select)=>{
+    select.addEventListener("click",()=>{
+        select.classList.toggle("shoes");
+    });
+})
+selectDiv.forEach((select,index)=>{
+    select.addEventListener("click",()=>{
+        let sourceImage = `./images/image-product-${index+1}.jpg`;
+        imageContainer.setAttribute("src",sourceImage);
+        console.log(index)
+        select.classList.toggle("border");
+    })
+})
+imageContainer.addEventListener("click",()=>{
+    imageContainerMobile.classList.toggle("image-container-active");
+});
