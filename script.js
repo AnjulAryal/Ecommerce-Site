@@ -17,6 +17,8 @@ let selects = document.querySelectorAll(".select");
 let selectDiv = document.querySelectorAll(".select-div");
 let imageContainer = document.querySelector(".desktop-image");
 let imageContainerMobile = document.querySelector(".image-container");
+let crossIcon = document.querySelector(".cross-icon");
+let imageContainerOne = document.querySelector(".image-container-1");
 let counter = 0;
 slides.forEach((slide,index)=>{
     slide.style.left = `${index * 100}%`
@@ -99,5 +101,8 @@ selectDiv.forEach((select,index)=>{
     })
 })
 imageContainer.addEventListener("click",()=>{
-    imageContainerMobile.classList.toggle("image-container-active");
+    imageContainerOne.style.display = "flex";
 });
+crossIcon.addEventListener("click",()=>{
+    imageContainerOne.style.display = "none";
+})

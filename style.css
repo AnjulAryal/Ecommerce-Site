@@ -81,7 +81,7 @@ nav li{
 .arrows{
     width: 100%;
     position: absolute;
-    top:50%;
+    top:35%;
     display: flex;
     justify-content: space-between;
     padding-inline: 1rem;
@@ -253,6 +253,9 @@ nav li{
 .image-container-des{
     display: none;
 }
+.cross-icon{
+    display: none;
+}
 @media screen and (min-width:760px) {
     body{
         display: grid;
@@ -266,6 +269,10 @@ nav li{
     }
     .menu,.close{
         display: none;
+    }
+    .close{
+        width: 50px;
+        height: 50px;
     }
     .navbar{
         width: 100%;
@@ -298,6 +305,7 @@ nav li{
         grid-row: 2/3;
         align-items: center;
         justify-content: space-between;
+        height: auto;
     }
      main{
         display: grid;
@@ -365,7 +373,7 @@ nav li{
         width: 100%;
     }
     .cart-box{
-       left: 70%;
+       left: 62%;
        top: 2%;
        box-shadow: 0px 2px 5px rgb(148, 147, 147);
     }
@@ -375,5 +383,36 @@ nav li{
 .image-container{
     display: none;
 }
-
+.image-container-active{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    border-radius: 1rem;
+    position: relative;
+}
+.arrows{
+    position: absolute;
+    top:50%;
+}
+.ico{
+    margin-inline: 1rem;
+}
+.ico .cross-icon{
+    width: 30px;
+    height: 30px;
+} 
+.cross-icon:hover{
+    color: var(--Orange);
+    cursor: pointer;
+}
+.image-container-1{
+    display: flex;
+    position: absolute;
+    top:5%;
+    left: 25%;
+    display: none;
+}
+.cross-icon{
+    display: flex;
+}
 }
